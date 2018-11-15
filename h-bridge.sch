@@ -1,0 +1,925 @@
+EESchema Schematic File Version 4
+LIBS:h-bridge-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_BJT:BC337 Q1
+U 1 1 5BE742FB
+P 1800 2650
+F 0 "Q1" H 1991 2696 50  0000 L CNN
+F 1 "BC337" H 1991 2605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 2000 2575 50  0001 L CIN
+F 3 "http://www.nxp.com/documents/data_sheet/BC817_BC817W_BC337.pdf" H 1800 2650 50  0001 L CNN
+	1    1800 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC337 Q14
+U 1 1 5BE743DC
+P 4900 2650
+F 0 "Q14" H 5091 2696 50  0000 L CNN
+F 1 "BC337" H 5091 2605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 5100 2575 50  0001 L CIN
+F 3 "http://www.nxp.com/documents/data_sheet/BC817_BC817W_BC337.pdf" H 4900 2650 50  0001 L CNN
+	1    4900 2650
+	-1   0    0    -1  
+$EndComp
+Text GLabel 900  2650 0    50   Input ~ 0
+IN_A1
+Text GLabel 5750 2650 2    50   Input ~ 0
+IN_A2
+$Comp
+L Device:R R1
+U 1 1 5BE753AB
+P 1300 2650
+F 0 "R1" V 1093 2650 50  0000 C CNN
+F 1 "2k2" V 1184 2650 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 1230 2650 50  0001 C CNN
+F 3 "~" H 1300 2650 50  0001 C CNN
+	1    1300 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5BE75442
+P 5400 2650
+F 0 "R4" V 5193 2650 50  0000 C CNN
+F 1 "2k2" V 5284 2650 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 5330 2650 50  0001 C CNN
+F 3 "~" H 5400 2650 50  0001 C CNN
+	1    5400 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5750 2650 5550 2650
+Wire Wire Line
+	5250 2650 5100 2650
+Wire Wire Line
+	1600 2650 1450 2650
+Wire Wire Line
+	1150 2650 900  2650
+$Comp
+L Transistor_BJT_AE:SS8050DTA Q2
+U 1 1 5BE75678
+P 2300 3500
+F 0 "Q2" H 2441 3546 50  0000 L CNN
+F 1 "SS8050DTA" H 2441 3455 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 2300 3450 50  0001 C CNN
+F 3 "" H 2300 3450 50  0001 C CNN
+	1    2300 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BE7570C
+P 1900 3150
+F 0 "R2" H 1970 3196 50  0000 L CNN
+F 1 "33" H 1970 3105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P5.08mm_Vertical" V 1830 3150 50  0001 C CNN
+F 3 "~" H 1900 3150 50  0001 C CNN
+	1    1900 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2850 1900 3000
+Wire Wire Line
+	1900 3300 1900 3500
+Wire Wire Line
+	2050 3500 1900 3500
+$Comp
+L Transistor_BJT_AE:SS8050DTA Q3
+U 1 1 5BE758E5
+P 2550 3850
+F 0 "Q3" H 2691 3896 50  0000 L CNN
+F 1 "SS8050DTA" H 2691 3805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 2550 3800 50  0001 C CNN
+F 3 "" H 2550 3800 50  0001 C CNN
+	1    2550 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT_AE:SS8050DTA Q5
+U 1 1 5BE75960
+P 2800 4200
+F 0 "Q5" H 2941 4246 50  0000 L CNN
+F 1 "SS8050DTA" H 2941 4155 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 2800 4150 50  0001 C CNN
+F 3 "" H 2800 4150 50  0001 C CNN
+	1    2800 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 3850 1900 3500
+Connection ~ 1900 3500
+Wire Wire Line
+	2550 4200 1900 4200
+Wire Wire Line
+	1900 4200 1900 3850
+Connection ~ 1900 3850
+Text GLabel 2700 3050 2    50   Input ~ 0
+OUT_A1
+Text GLabel 2700 2750 2    50   Input ~ 0
+OUT_A2
+Wire Wire Line
+	2700 3050 2600 3050
+Wire Wire Line
+	2350 3050 2350 3300
+Wire Wire Line
+	2600 3050 2600 3400
+Connection ~ 2600 3050
+Wire Wire Line
+	2600 3050 2350 3050
+Wire Wire Line
+	2600 3400 2850 3400
+Wire Wire Line
+	2850 3400 2850 4000
+Connection ~ 2600 3400
+Wire Wire Line
+	2600 3400 2600 3650
+Wire Wire Line
+	2300 3850 1900 3850
+$Comp
+L power:GND #PWR01
+U 1 1 5BE762FE
+P 3400 4950
+F 0 "#PWR01" H 3400 4700 50  0001 C CNN
+F 1 "GND" H 3405 4777 50  0000 C CNN
+F 2 "" H 3400 4950 50  0001 C CNN
+F 3 "" H 3400 4950 50  0001 C CNN
+	1    3400 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 3700 2350 4500
+Wire Wire Line
+	2350 4500 2600 4500
+Wire Wire Line
+	2600 4050 2600 4500
+Connection ~ 2600 4500
+Wire Wire Line
+	2600 4500 2850 4500
+Wire Wire Line
+	2850 4400 2850 4500
+Connection ~ 2850 4500
+$Comp
+L Transistor_BJT_AE:SS8550 Q7
+U 1 1 5BE7736F
+P 3200 1500
+F 0 "Q7" H 3091 1546 50  0000 L CNN
+F 1 "SS8550" H 3091 1455 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3100 1350 50  0001 C CNN
+F 3 "" H 3100 1350 50  0001 C CNN
+	1    3200 1500
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT_AE:SS8550 Q6
+U 1 1 5BE774BF
+P 3000 1900
+F 0 "Q6" H 2891 1946 50  0000 L CNN
+F 1 "SS8550" H 2891 1855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 2900 1750 50  0001 C CNN
+F 3 "" H 2900 1750 50  0001 C CNN
+	1    3000 1900
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT_AE:SS8550 Q4
+U 1 1 5BE7750F
+P 2800 2300
+F 0 "Q4" H 2691 2346 50  0000 L CNN
+F 1 "SS8550" H 2691 2255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 2700 2150 50  0001 C CNN
+F 3 "" H 2700 2150 50  0001 C CNN
+	1    2800 2300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1900 2450 1900 2300
+Wire Wire Line
+	1900 2300 2300 2300
+Wire Wire Line
+	1900 2300 1900 1900
+Wire Wire Line
+	1900 1900 2500 1900
+Connection ~ 1900 2300
+Wire Wire Line
+	1900 1900 1900 1500
+Wire Wire Line
+	1900 1500 2700 1500
+Connection ~ 1900 1900
+$Comp
+L power:+12V #PWR02
+U 1 1 5BE7892C
+P 3700 800
+F 0 "#PWR02" H 3700 650 50  0001 C CNN
+F 1 "+12V" H 3715 973 50  0000 C CNN
+F 2 "" H 3700 800 50  0001 C CNN
+F 3 "" H 3700 800 50  0001 C CNN
+	1    3700 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 800  3700 1000
+Wire Wire Line
+	2800 1300 2800 1700
+Wire Wire Line
+	2800 1300 2600 1300
+Wire Wire Line
+	2600 1300 2600 2100
+Connection ~ 2800 1300
+Wire Wire Line
+	2600 2500 2600 2600
+Wire Wire Line
+	2600 2750 2700 2750
+Wire Wire Line
+	2800 2100 2800 2600
+Wire Wire Line
+	2800 2600 2600 2600
+Connection ~ 2600 2600
+Wire Wire Line
+	2600 2600 2600 2750
+Wire Wire Line
+	3000 1700 3000 2600
+Wire Wire Line
+	3000 2600 2800 2600
+Connection ~ 2800 2600
+Wire Wire Line
+	2800 1300 3000 1300
+Connection ~ 3000 1300
+Wire Wire Line
+	3000 1300 3700 1300
+$Comp
+L Transistor_BJT_AE:SS8550 Q8
+U 1 1 5BE82E7E
+P 3500 1500
+F 0 "Q8" H 3391 1454 50  0000 L CNN
+F 1 "SS8550" H 3391 1545 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3400 1350 50  0001 C CNN
+F 3 "" H 3400 1350 50  0001 C CNN
+	1    3500 1500
+	-1   0    0    1   
+$EndComp
+Connection ~ 3700 1300
+$Comp
+L Transistor_BJT_AE:SS8550 Q9
+U 1 1 5BE82F16
+P 3700 1950
+F 0 "Q9" H 3591 1904 50  0000 L CNN
+F 1 "SS8550" H 3591 1995 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3600 1800 50  0001 C CNN
+F 3 "" H 3600 1800 50  0001 C CNN
+	1    3700 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT_AE:SS8550 Q11
+U 1 1 5BE82FBD
+P 3900 2450
+F 0 "Q11" H 3791 2404 50  0000 L CNN
+F 1 "SS8550" H 3791 2495 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3800 2300 50  0001 C CNN
+F 3 "" H 3800 2300 50  0001 C CNN
+	1    3900 2450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4400 2450 4800 2450
+Wire Wire Line
+	4200 1950 4800 1950
+Wire Wire Line
+	4800 1950 4800 2450
+Connection ~ 4800 2450
+Wire Wire Line
+	4000 1500 4800 1500
+Wire Wire Line
+	4800 1500 4800 1950
+Connection ~ 4800 1950
+Text GLabel 3650 2750 0    50   Input ~ 0
+OUT_A1
+Wire Wire Line
+	4100 2650 4100 2750
+Wire Wire Line
+	4100 2750 3900 2750
+Wire Wire Line
+	3900 2150 3900 2750
+Connection ~ 3900 2750
+Wire Wire Line
+	3900 2750 3700 2750
+Wire Wire Line
+	3700 1700 3700 2750
+Connection ~ 3700 2750
+Wire Wire Line
+	3700 2750 3650 2750
+Wire Wire Line
+	3900 1750 3900 1300
+Wire Wire Line
+	3900 1300 3700 1300
+Wire Wire Line
+	4100 2250 4100 1300
+Wire Wire Line
+	4100 1300 3900 1300
+Connection ~ 3900 1300
+$Comp
+L Transistor_BJT_AE:SS8050DTA Q13
+U 1 1 5BE89CC6
+P 4350 3450
+F 0 "Q13" H 4490 3496 50  0000 L CNN
+F 1 "SS8050DTA" H 4490 3405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4350 3400 50  0001 C CNN
+F 3 "" H 4350 3400 50  0001 C CNN
+	1    4350 3450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT_AE:SS8050DTA Q12
+U 1 1 5BE89D7D
+P 4100 3900
+F 0 "Q12" H 4240 3946 50  0000 L CNN
+F 1 "SS8050DTA" H 4240 3855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4100 3850 50  0001 C CNN
+F 3 "" H 4100 3850 50  0001 C CNN
+	1    4100 3900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT_AE:SS8050DTA Q10
+U 1 1 5BE89E1E
+P 3850 4300
+F 0 "Q10" H 3990 4346 50  0000 L CNN
+F 1 "SS8050DTA" H 3990 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3850 4250 50  0001 C CNN
+F 3 "" H 3850 4250 50  0001 C CNN
+	1    3850 4300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4100 4050 4500
+Wire Wire Line
+	4050 4500 3800 4500
+Connection ~ 3800 4500
+Wire Wire Line
+	4300 3650 4300 4500
+Wire Wire Line
+	4300 4500 4050 4500
+Connection ~ 4050 4500
+$Comp
+L Device:R R3
+U 1 1 5BE8C893
+P 4800 3100
+F 0 "R3" H 4870 3146 50  0000 L CNN
+F 1 "33" H 4870 3055 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P5.08mm_Vertical" V 4730 3100 50  0001 C CNN
+F 3 "~" H 4800 3100 50  0001 C CNN
+	1    4800 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2850 4800 2950
+Wire Wire Line
+	4800 3250 4800 3450
+Wire Wire Line
+	4800 3450 4600 3450
+Wire Wire Line
+	4800 3450 4800 3900
+Wire Wire Line
+	4800 3900 4350 3900
+Connection ~ 4800 3450
+Wire Wire Line
+	4800 3900 4800 4300
+Wire Wire Line
+	4800 4300 4100 4300
+Connection ~ 4800 3900
+Text GLabel 3650 3050 0    50   Input ~ 0
+OUT_A2
+Wire Wire Line
+	3650 3050 3800 3050
+Wire Wire Line
+	4300 3050 4300 3250
+Wire Wire Line
+	4050 3700 4050 3050
+Connection ~ 4050 3050
+Wire Wire Line
+	4050 3050 4300 3050
+Wire Wire Line
+	3800 4100 3800 3050
+Connection ~ 3800 3050
+Wire Wire Line
+	3800 3050 4050 3050
+Wire Wire Line
+	2850 4500 3400 4500
+Connection ~ 3400 4500
+Wire Wire Line
+	3400 4500 3800 4500
+$Comp
+L Transistor_BJT:BC337 Q15
+U 1 1 5BE9C422
+P 6500 3150
+F 0 "Q15" H 6691 3196 50  0000 L CNN
+F 1 "BC337" H 6691 3105 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 6700 3075 50  0001 L CIN
+F 3 "http://www.nxp.com/documents/data_sheet/BC817_BC817W_BC337.pdf" H 6500 3150 50  0001 L CNN
+	1    6500 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC337 Q28
+U 1 1 5BE9C429
+P 9600 3150
+F 0 "Q28" H 9791 3196 50  0000 L CNN
+F 1 "BC337" H 9791 3105 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 9800 3075 50  0001 L CIN
+F 3 "http://www.nxp.com/documents/data_sheet/BC817_BC817W_BC337.pdf" H 9600 3150 50  0001 L CNN
+	1    9600 3150
+	-1   0    0    -1  
+$EndComp
+Text GLabel 5600 3150 0    50   Input ~ 0
+IN_B1
+Text GLabel 10450 3150 2    50   Input ~ 0
+IN_B2
+$Comp
+L Device:R R5
+U 1 1 5BE9C432
+P 6000 3150
+F 0 "R5" V 5793 3150 50  0000 C CNN
+F 1 "2k2" V 5884 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 5930 3150 50  0001 C CNN
+F 3 "~" H 6000 3150 50  0001 C CNN
+	1    6000 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5BE9C439
+P 10100 3150
+F 0 "R8" V 9893 3150 50  0000 C CNN
+F 1 "2k2" V 9984 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 10030 3150 50  0001 C CNN
+F 3 "~" H 10100 3150 50  0001 C CNN
+	1    10100 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10450 3150 10250 3150
+Wire Wire Line
+	9950 3150 9800 3150
+Wire Wire Line
+	6300 3150 6150 3150
+$Comp
+L Transistor_BJT_AE:SS8050DTA Q16
+U 1 1 5BE9C444
+P 7000 4000
+F 0 "Q16" H 7141 4046 50  0000 L CNN
+F 1 "SS8050DTA" H 7141 3955 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 7000 3950 50  0001 C CNN
+F 3 "" H 7000 3950 50  0001 C CNN
+	1    7000 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5BE9C44B
+P 6600 3650
+F 0 "R6" H 6670 3696 50  0000 L CNN
+F 1 "33" H 6670 3605 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P5.08mm_Vertical" V 6530 3650 50  0001 C CNN
+F 3 "~" H 6600 3650 50  0001 C CNN
+	1    6600 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 3350 6600 3500
+Wire Wire Line
+	6600 3800 6600 4000
+Wire Wire Line
+	6750 4000 6600 4000
+$Comp
+L Transistor_BJT_AE:SS8050DTA Q17
+U 1 1 5BE9C455
+P 7250 4350
+F 0 "Q17" H 7391 4396 50  0000 L CNN
+F 1 "SS8050DTA" H 7391 4305 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 7250 4300 50  0001 C CNN
+F 3 "" H 7250 4300 50  0001 C CNN
+	1    7250 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT_AE:SS8050DTA Q19
+U 1 1 5BE9C45C
+P 7500 4700
+F 0 "Q19" H 7641 4746 50  0000 L CNN
+F 1 "SS8050DTA" H 7641 4655 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 7500 4650 50  0001 C CNN
+F 3 "" H 7500 4650 50  0001 C CNN
+	1    7500 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4350 6600 4000
+Connection ~ 6600 4000
+Wire Wire Line
+	7250 4700 6600 4700
+Wire Wire Line
+	6600 4700 6600 4350
+Connection ~ 6600 4350
+Text GLabel 7400 3550 2    50   Input ~ 0
+OUT_B1
+Text GLabel 7400 3250 2    50   Input ~ 0
+OUT_B2
+Wire Wire Line
+	7400 3550 7300 3550
+Wire Wire Line
+	7050 3550 7050 3800
+Wire Wire Line
+	7300 3550 7300 3900
+Connection ~ 7300 3550
+Wire Wire Line
+	7300 3550 7050 3550
+Wire Wire Line
+	7300 3900 7550 3900
+Wire Wire Line
+	7550 3900 7550 4500
+Connection ~ 7300 3900
+Wire Wire Line
+	7300 3900 7300 4150
+Wire Wire Line
+	7000 4350 6600 4350
+Wire Wire Line
+	7050 4200 7050 5000
+Wire Wire Line
+	7050 5000 7300 5000
+Wire Wire Line
+	7300 4550 7300 5000
+Connection ~ 7300 5000
+Wire Wire Line
+	7300 5000 7550 5000
+Wire Wire Line
+	7550 4900 7550 5000
+Connection ~ 7550 5000
+$Comp
+L Transistor_BJT_AE:SS8550 Q21
+U 1 1 5BE9C481
+P 7900 2000
+F 0 "Q21" H 7791 2046 50  0000 L CNN
+F 1 "SS8550" H 7791 1955 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 7800 1850 50  0001 C CNN
+F 3 "" H 7800 1850 50  0001 C CNN
+	1    7900 2000
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT_AE:SS8550 Q20
+U 1 1 5BE9C488
+P 7700 2400
+F 0 "Q20" H 7591 2446 50  0000 L CNN
+F 1 "SS8550" H 7591 2355 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 7600 2250 50  0001 C CNN
+F 3 "" H 7600 2250 50  0001 C CNN
+	1    7700 2400
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT_AE:SS8550 Q18
+U 1 1 5BE9C48F
+P 7500 2800
+F 0 "Q18" H 7391 2846 50  0000 L CNN
+F 1 "SS8550" H 7391 2755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 7400 2650 50  0001 C CNN
+F 3 "" H 7400 2650 50  0001 C CNN
+	1    7500 2800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6600 2950 6600 2800
+Wire Wire Line
+	6600 2800 7000 2800
+Wire Wire Line
+	6600 2800 6600 2400
+Wire Wire Line
+	6600 2400 7200 2400
+Connection ~ 6600 2800
+Wire Wire Line
+	6600 2400 6600 2000
+Wire Wire Line
+	6600 2000 7400 2000
+Connection ~ 6600 2400
+Wire Wire Line
+	7500 1800 7500 2200
+Wire Wire Line
+	7500 1800 7300 1800
+Wire Wire Line
+	7300 1800 7300 2600
+Connection ~ 7500 1800
+Wire Wire Line
+	7300 3000 7300 3100
+Wire Wire Line
+	7300 3250 7400 3250
+Wire Wire Line
+	7500 2600 7500 3100
+Wire Wire Line
+	7500 3100 7300 3100
+Connection ~ 7300 3100
+Wire Wire Line
+	7300 3100 7300 3250
+Wire Wire Line
+	7700 2200 7700 3100
+Wire Wire Line
+	7700 3100 7500 3100
+Connection ~ 7500 3100
+Wire Wire Line
+	7500 1800 7700 1800
+Connection ~ 7700 1800
+Wire Wire Line
+	7700 1800 8050 1800
+$Comp
+L Transistor_BJT_AE:SS8550 Q22
+U 1 1 5BE9C4B5
+P 8200 2000
+F 0 "Q22" H 8091 1954 50  0000 L CNN
+F 1 "SS8550" H 8091 2045 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 8100 1850 50  0001 C CNN
+F 3 "" H 8100 1850 50  0001 C CNN
+	1    8200 2000
+	-1   0    0    1   
+$EndComp
+Connection ~ 8400 1800
+$Comp
+L Transistor_BJT_AE:SS8550 Q23
+U 1 1 5BE9C4BD
+P 8400 2450
+F 0 "Q23" H 8291 2404 50  0000 L CNN
+F 1 "SS8550" H 8291 2495 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 8300 2300 50  0001 C CNN
+F 3 "" H 8300 2300 50  0001 C CNN
+	1    8400 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT_AE:SS8550 Q25
+U 1 1 5BE9C4C4
+P 8600 2950
+F 0 "Q25" H 8491 2904 50  0000 L CNN
+F 1 "SS8550" H 8491 2995 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 8500 2800 50  0001 C CNN
+F 3 "" H 8500 2800 50  0001 C CNN
+	1    8600 2950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9100 2950 9500 2950
+Wire Wire Line
+	8900 2450 9500 2450
+Wire Wire Line
+	9500 2450 9500 2950
+Connection ~ 9500 2950
+Wire Wire Line
+	8700 2000 9500 2000
+Wire Wire Line
+	9500 2000 9500 2450
+Connection ~ 9500 2450
+Text GLabel 8350 3250 0    50   Input ~ 0
+OUT_B1
+Wire Wire Line
+	8800 3150 8800 3250
+Wire Wire Line
+	8800 3250 8600 3250
+Wire Wire Line
+	8600 2650 8600 3250
+Connection ~ 8600 3250
+Wire Wire Line
+	8600 3250 8400 3250
+Wire Wire Line
+	8400 2200 8400 3250
+Connection ~ 8400 3250
+Wire Wire Line
+	8400 3250 8350 3250
+Wire Wire Line
+	8600 2250 8600 1800
+Wire Wire Line
+	8600 1800 8400 1800
+Wire Wire Line
+	8800 2750 8800 1800
+Wire Wire Line
+	8800 1800 8600 1800
+Connection ~ 8600 1800
+$Comp
+L Transistor_BJT_AE:SS8050DTA Q27
+U 1 1 5BE9C4E0
+P 9050 3950
+F 0 "Q27" H 9190 3996 50  0000 L CNN
+F 1 "SS8050DTA" H 9190 3905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 9050 3900 50  0001 C CNN
+F 3 "" H 9050 3900 50  0001 C CNN
+	1    9050 3950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT_AE:SS8050DTA Q26
+U 1 1 5BE9C4E7
+P 8800 4400
+F 0 "Q26" H 8940 4446 50  0000 L CNN
+F 1 "SS8050DTA" H 8940 4355 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 8800 4350 50  0001 C CNN
+F 3 "" H 8800 4350 50  0001 C CNN
+	1    8800 4400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT_AE:SS8050DTA Q24
+U 1 1 5BE9C4EE
+P 8550 4800
+F 0 "Q24" H 8690 4846 50  0000 L CNN
+F 1 "SS8050DTA" H 8690 4755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 8550 4750 50  0001 C CNN
+F 3 "" H 8550 4750 50  0001 C CNN
+	1    8550 4800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 4600 8750 5000
+Wire Wire Line
+	8750 5000 8500 5000
+Connection ~ 8500 5000
+Wire Wire Line
+	9000 4150 9000 5000
+Wire Wire Line
+	9000 5000 8750 5000
+Connection ~ 8750 5000
+$Comp
+L Device:R R7
+U 1 1 5BE9C4FB
+P 9500 3600
+F 0 "R7" H 9570 3646 50  0000 L CNN
+F 1 "33" H 9570 3555 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P5.08mm_Vertical" V 9430 3600 50  0001 C CNN
+F 3 "~" H 9500 3600 50  0001 C CNN
+	1    9500 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 3350 9500 3450
+Wire Wire Line
+	9500 3750 9500 3950
+Wire Wire Line
+	9500 3950 9300 3950
+Wire Wire Line
+	9500 3950 9500 4400
+Wire Wire Line
+	9500 4400 9050 4400
+Connection ~ 9500 3950
+Wire Wire Line
+	9500 4400 9500 4800
+Wire Wire Line
+	9500 4800 8800 4800
+Connection ~ 9500 4400
+Text GLabel 8350 3550 0    50   Input ~ 0
+OUT_B2
+Wire Wire Line
+	8350 3550 8500 3550
+Wire Wire Line
+	9000 3550 9000 3750
+Wire Wire Line
+	8750 4200 8750 3550
+Connection ~ 8750 3550
+Wire Wire Line
+	8750 3550 9000 3550
+Wire Wire Line
+	8500 4600 8500 3550
+Connection ~ 8500 3550
+Wire Wire Line
+	8500 3550 8750 3550
+Wire Wire Line
+	3700 1000 8050 1000
+Wire Wire Line
+	8050 1000 8050 1800
+Connection ~ 3700 1000
+Wire Wire Line
+	3700 1000 3700 1300
+Connection ~ 8050 1800
+Wire Wire Line
+	8050 1800 8400 1800
+Wire Wire Line
+	7550 5000 8150 5000
+Wire Wire Line
+	3400 4950 3400 4750
+Wire Wire Line
+	8150 5000 8150 5400
+Wire Wire Line
+	8150 5400 4000 5400
+Wire Wire Line
+	4000 5400 4000 4750
+Wire Wire Line
+	4000 4750 3400 4750
+Connection ~ 8150 5000
+Wire Wire Line
+	8150 5000 8500 5000
+Connection ~ 3400 4750
+Wire Wire Line
+	3400 4750 3400 4500
+Wire Wire Line
+	5850 3150 5600 3150
+$Comp
+L power:+12V #PWR0101
+U 1 1 5BE8DD88
+P 1000 5550
+F 0 "#PWR0101" H 1000 5400 50  0001 C CNN
+F 1 "+12V" H 1015 5723 50  0000 C CNN
+F 2 "" H 1000 5550 50  0001 C CNN
+F 3 "" H 1000 5550 50  0001 C CNN
+	1    1000 5550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5BE8DE5E
+P 1000 5650
+F 0 "#PWR0102" H 1000 5400 50  0001 C CNN
+F 1 "GND" V 1005 5522 50  0000 R CNN
+F 2 "" H 1000 5650 50  0001 C CNN
+F 3 "" H 1000 5650 50  0001 C CNN
+	1    1000 5650
+	0    1    1    0   
+$EndComp
+Text GLabel 1050 5750 0    50   Input ~ 0
+IN_A1
+Text GLabel 1050 5850 0    50   Input ~ 0
+IN_A2
+Text GLabel 1100 6300 0    50   Input ~ 0
+OUT_A1
+Text GLabel 1100 6400 0    50   Input ~ 0
+OUT_A2
+Text GLabel 1050 5950 0    50   Input ~ 0
+IN_B1
+Text GLabel 1050 6050 0    50   Input ~ 0
+IN_B2
+Text GLabel 1100 6950 0    50   Input ~ 0
+OUT_B1
+Text GLabel 1100 7050 0    50   Input ~ 0
+OUT_B2
+$Comp
+L Connector_Generic:Conn_01x06 J4
+U 1 1 5BEEE258
+P 1500 5750
+F 0 "J4" H 1580 5742 50  0000 L CNN
+F 1 "Conn_01x06" H 1580 5651 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 1500 5750 50  0001 C CNN
+F 3 "~" H 1500 5750 50  0001 C CNN
+	1    1500 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 5550 1300 5550
+Wire Wire Line
+	1000 5650 1300 5650
+Wire Wire Line
+	1050 5750 1300 5750
+Wire Wire Line
+	1050 5850 1300 5850
+Wire Wire Line
+	1050 5950 1300 5950
+Wire Wire Line
+	1050 6050 1300 6050
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5BF5868D
+P 1400 6300
+F 0 "J5" H 1480 6292 50  0000 L CNN
+F 1 "Conn_01x02" H 1480 6201 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1400 6300 50  0001 C CNN
+F 3 "~" H 1400 6300 50  0001 C CNN
+	1    1400 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 5BF58767
+P 1400 6950
+F 0 "J6" H 1480 6942 50  0000 L CNN
+F 1 "Conn_01x02" H 1480 6851 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1400 6950 50  0001 C CNN
+F 3 "~" H 1400 6950 50  0001 C CNN
+	1    1400 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 6300 1200 6300
+Wire Wire Line
+	1100 6400 1200 6400
+Wire Wire Line
+	1100 6950 1200 6950
+Wire Wire Line
+	1100 7050 1200 7050
+$EndSCHEMATC
