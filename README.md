@@ -6,4 +6,6 @@ So for instance I needed 4.5A of current to drive my little DC130 motors at 7.5V
 Other design ideas for future include adding reverse diodes to the output transistors to be able to drive bigger motors.
 Also it will be nice to incorporate a microcontroller on the same board at some point in the future.
 
+The project was designed in KiCad 5.0.1.
+
 Please feel free to use and improve it.
